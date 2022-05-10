@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include('./partials/head.ejs')%>
+    <body>
+        <%-include('./partials/nav.ejs')%>
+        <div class="ders-ekle content">
+            <form>
+                <label for="baslik">Ders Başlık</label>
+                <input type="text" id="baslik" required/>
+                <label for="icerik">Ders icerik</label>
+                <input type="text" id="icerik" required/>
+                <button>Kaydet</button>
+            </form>
+        </div>
+    
+    </body>
+
+    <script src="app.js"></script>
+</html>

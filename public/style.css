@@ -1,0 +1,16 @@
+
+body{
+max-width: 1200px;
+margin:20px;
+padding: 0 20px;
+font-family: 'Indie Flower',cursive;
+max-width: 1200px;
+font-size: larger;
+}
+
+p,h1,h2,h3,a,ul{
+margin:0px;
+padding: 0px;
+text-decoration: none;
+color: #222;
+}
