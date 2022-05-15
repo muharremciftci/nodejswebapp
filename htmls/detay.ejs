@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+    <%-include('./partials/head.ejs')%>
+    <body>
+        <%-include('./partials/nav.ejs')%>
+      <div class="detay content">
+        <h2><%=ders.baslik%></h2>
+            <div class="content">
+                <p><%=ders.icerik%></p>
+                <p><%=ders.createdAt%></p>
+            </div>
+            <a class="sil" data-doc="<%=ders._id%>">Sil</a>
+      </div>
+
+    </body>
+
+    <script>
+      const silButon=document.querySelector('a.sil');
+      silButon.addEventListener('click',(e)=>{
+        const endpoint='/dersler/${silButon.dataset.doc}';
+
+        fetch(endpoint,{
+            method:'DELETE'   
+        }).then(response=>response.json())
+        .then(data=>window.location.href=data.redirect)
+        .catch((err)=>console.log(err))
+      })
+    </script>
+    <script src="app.js"></script>
+  
+</html>
